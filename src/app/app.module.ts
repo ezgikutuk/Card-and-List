@@ -3,20 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CardComponent } from './Components/card/card.component';
-import { ListComponent } from './Components/list/list.component';
+
+
+import { AngularFireModule } from '@angular/fire';
+import {environment} from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorage } from '@angular/fire/storage';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
-    ListComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+   
   ],
-  providers: [],
+  providers: [AngularFireStorage],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
