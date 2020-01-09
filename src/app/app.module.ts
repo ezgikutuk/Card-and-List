@@ -9,6 +9,7 @@ import { AngularFireModule } from '@angular/fire';
 import {environment} from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -19,6 +20,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     AngularFireModule,
     AngularFireModule.initializeApp(environment.firebase),

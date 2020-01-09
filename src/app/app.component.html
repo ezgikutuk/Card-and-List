@@ -1,5 +1,5 @@
 
-<div class="container mt-3">
+<div class="container mt-3" *ngIf="items.length>0">
     <div class="card mb-3">
         <div class="card-header">
             Haftanın Yemeği {{ items[0].tag}}
@@ -7,14 +7,14 @@
         <div class="card-body">
             <h5 class="card-title"> {{ items[0].title}}</h5>
             <p class="card-text"> {{ items[0].description }}</p>
-            <p class="card-text"> {{ items[0].date }}</p>
+            <p class="card-text"> {{items[0].date}}</p>
         </div>
     </div>
 
     <div class="row">
         <div class="col-lg-12">
             <ul class="list-group">
-                <li class="list-group-item" *ngFor="let yemek of items;"> {{ yemek.date }} {{ yemek.title }} </li>
+                <li class="list-group-item" *ngFor="let yemek of items;"> {{yemek.date}} {{ yemek.title }} </li>
             </ul>
         </div>
     </div>
