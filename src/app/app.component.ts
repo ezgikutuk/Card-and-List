@@ -40,7 +40,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.itemCollection = this.db.collection('items').valueChanges();
-    console.log(this.itemCollection);
+    //console.log(this.itemCollection);
 
     this.itemCollection
       .pipe(
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit, OnDestroy {
       )
       .subscribe(data => {
         this.items = data;
-        console.log(this.items);
+        //console.log(this.items);
       })
   }
 
